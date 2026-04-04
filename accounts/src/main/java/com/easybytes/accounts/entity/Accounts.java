@@ -11,7 +11,6 @@ import lombok.*;
 @ToString
 public class Accounts extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "account_number")
     private long accountNumber;
 
