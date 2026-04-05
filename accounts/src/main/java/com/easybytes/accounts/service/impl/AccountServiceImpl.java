@@ -37,7 +37,7 @@ public class AccountServiceImpl implements IAccountsService {
                     + customerDto.getMobileNumber());
         }
 
-        Customer customer = CustomerMapper.mapToCustomer(customerDto);
+        Customer customer = CustomerMapper.mapToCustomer(customerDto, new Customer());
         customer.setCreated_at(LocalDateTime.now());
         customer.setCreated_by("Anonymous");
         Customer savedCustomer = customerRepo.save(customer);
